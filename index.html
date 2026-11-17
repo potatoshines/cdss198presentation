@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research 001</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Shared top bar. Pages live in the pages/ folder, one file per person. */
+:root{--bar:68px}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,system-ui,sans-serif;overflow:hidden}
+#bar{position:fixed;inset:0 0 auto 0;height:var(--bar);z-index:10;display:flex;justify-content:center;align-items:center;gap:6px;padding:0 12px;background:#fff;border-bottom:1px solid #e2e8f2;overflow-x:auto}
+#bar a{padding:9px 22px;border-radius:999px;font-weight:500;color:#5f6b80;text-decoration:none;transition:background .2s,color .2s;white-space:nowrap}
+#bar a:hover{color:#1c2230}
+#bar a.on{background:var(--c);color:#fff}
+#bar a:focus-visible{outline:2px solid var(--c);outline-offset:2px}
+iframe{position:fixed;top:var(--bar);left:0;width:100%;height:calc(100% - var(--bar));border:0}
+</style>
+</head>
+<body>
+<nav id="bar" aria-label="Team pages">
+  <a href="#shin" data-k="shin" style="--c:#2f7df6">Shin</a>
+  <a href="#khanh" data-k="khanh" style="--c:#e5447f">Khanh</a>
+  <a href="#aaron" data-k="aaron" style="--c:#12a98a">Aaron</a>
+  <a href="#wesley" data-k="wesley" style="--c:#e08a00">Wesley</a>
+  <a href="#nhung" data-k="nhung" style="--c:#7a56e0">Nhung</a>
+</nav>
+<iframe id="view" title="Team member page"></iframe>
+<script>
+const PAGES = {
+  shin: 'pages/shin.html',
+  khanh: 'pages/khanh.html',
+  aaron: 'pages/aaron.html',
+  wesley: 'pages/wesley.html',
+  nhung: 'pages/nhung.html'
+};
+const DEFAULT = 'shin'; // page that opens first
+function route() {
+  const k = PAGES[location.hash.slice(1)] ? location.hash.slice(1) : DEFAULT;
+  document.getElementById('view').src = PAGES[k];
+  document.querySelectorAll('#bar a').forEach(a => a.classList.toggle('on', a.dataset.k === k));
+}
+addEventListener('hashchange', route);
+route();
+</script>
+</body>
+</html>

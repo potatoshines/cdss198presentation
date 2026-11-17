@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aaron | Research 001</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Aaron's page. Everything for this tab lives in this file, so edit freely. */
+:root{--accent:#12a98a;--ink:#1c2230;--muted:#5f6b80;--bg:#ffffff;--bg2:#f3f6fb}
+*{box-sizing:border-box;margin:0}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+.slide{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center;padding:48px clamp(20px,7vw,110px)}
+.slide:nth-child(even){background:var(--bg2)}
+.inner{width:100%;max-width:1100px;margin:0 auto}
+.two{display:grid;grid-template-columns:5fr 6fr;gap:clamp(28px,6vw,90px);align-items:center}
+h1{font-size:clamp(4rem,14vw,10rem);font-weight:800;letter-spacing:-.045em;line-height:.95;color:var(--accent)}
+h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.03em;line-height:1.08}
+.lede{margin-top:16px;color:var(--muted);font-size:1.1rem;max-width:44ch}
+blockquote{border-left:4px solid var(--accent);padding-left:20px;font-size:1.3rem;font-weight:500;line-height:1.45}
+ul{margin-top:24px;padding-left:20px;display:grid;gap:10px;color:var(--muted)}
+ul li::marker{color:var(--accent)}
+@media (max-width:760px){html{scroll-snap-type:y proximity}.two{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<section class="slide">
+  <div class="inner">
+    <h1>Aaron</h1>
+    <p class="lede">Write one line about yourself and your role in the group.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner two">
+    <div>
+      <h2>How this class helped us form our group</h2>
+      <p class="lede">How did we go from strangers to a team?</p>
+    </div>
+    <div>
+      <blockquote>Replace this with a moment from the first weeks of class that stuck with you.</blockquote>
+      <ul>
+        <li>What in class brought us together?</li>
+        <li>What did each person bring to the group?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner two">
+    <div>
+      <h2>How lecture topics taught us about research</h2>
+      <p class="lede">Pick one topic and explain what it changed for you.</p>
+    </div>
+    <div>
+      <blockquote>Your favorite takeaway from lecture, in one sentence.</blockquote>
+      <ul>
+        <li>The topic and why it caught your attention</li>
+        <li>An example from our own project</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="inner two">
+    <div>
+      <h2>Interesting perspectives</h2>
+      <p class="lede">Something you learned from a teammate, a reading, or a surprising source.</p>
+    </div>
+    <div>
+      <blockquote>A perspective that changed your mind or surprised you.</blockquote>
+      <ul>
+        <li>Who or what it came from</li>
+        <li>Why it matters for doing research well</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
